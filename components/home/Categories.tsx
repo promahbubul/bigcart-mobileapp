@@ -13,8 +13,8 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useFonts } from "expo-font";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import {
   FlatList,
   StyleSheet,
@@ -109,13 +109,13 @@ const Categories = () => {
                 style={{
                   backgroundColor: item.bgColor,
                   borderRadius: 50,
-                  width: 50,
+                  width: 40,
                   justifyContent: "center",
                   alignItems: "center",
-                  height: 50,
+                  height: 40,
                 }}
               >
-                <Icon width={24} height={24} />
+                <Icon width={20} height={20} />
               </TouchableOpacity>
               <Text style={styles.iconName}>{item.name}</Text>
             </View>
@@ -129,13 +129,13 @@ export default Categories;
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 17,
-    marginTop: 20,
+    marginTop: 14,
   },
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 15,
+    marginBottom: 10,
   },
   title: {
     fontSize: 18,
