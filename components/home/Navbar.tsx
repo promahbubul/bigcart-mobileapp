@@ -21,7 +21,10 @@ const Navbar = () => {
         </TouchableOpacity>
       </View>
       <View>
-        <TouchableOpacity style={styles.activeBtn}>
+        <TouchableOpacity
+          onPress={() => navigate("/(public)/cart")}
+          style={styles.activeBtn}
+        >
           <MaterialCommunityIcons
             name="shopping-outline"
             size={25}
