@@ -1,26 +1,26 @@
 import {
-    BabyCareIcon,
-    BeverageIcon,
-    EdibalOilIcon,
-    FruitesIcon,
-    GroceryIcon,
-    HouseHoldIcon,
-    VegetableIcon,
+  BabyCareIcon,
+  BeverageIcon,
+  EdibalOilIcon,
+  FruitesIcon,
+  GroceryIcon,
+  HouseHoldIcon,
+  VegetableIcon,
 } from "@/assets/icons";
 import {
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useFonts } from "expo-font";
 import {
-    FlatList,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 export const categoriesData = [
@@ -100,15 +100,25 @@ const Categories = () => {
         renderItem={({ item }) => {
           const Icon = item.icon;
           return (
-            <TouchableOpacity
+            <View
               style={{
-                backgroundColor: item.bgColor,
-                padding: 13,
-                borderRadius: 50,
+                alignItems: "center",
               }}
             >
-              <Icon width={24} height={24} />
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: item.bgColor,
+                  borderRadius: 50,
+                  width: 50,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 50,
+                }}
+              >
+                <Icon width={24} height={24} />
+              </TouchableOpacity>
+              <Text style={styles.iconName}>{item.name}</Text>
+            </View>
           );
         }}
       />
@@ -136,5 +146,12 @@ const styles = StyleSheet.create({
   icon: {
     height: 30,
     width: 30,
+  },
+  iconName: {
+    fontSize: 10,
+    color: "#868889",
+    marginTop: 5,
+    fontFamily: "Poppins_500Medium",
+    fontWeight: "medium",
   },
 });
